@@ -1,0 +1,132 @@
+.navbar {
+  background-color: #fafafa;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 5px 5px 5px #303030;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__buttons {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
+
+      button {
+        background-color: #fafafa;
+        border: solid 2px black;
+        border-radius: 5px;
+        padding: 0.5rem;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px #303030;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  &__single-movie {
+    display: flex;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50px 25px 25px 50px;
+    background-color: #fafafa;
+    box-shadow: 5px 5px 5px #303030;
+
+    &__image {
+      img {
+        display: block;
+        width: 200px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+    }
+
+    &__movie-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &__title {
+        text-align: center;
+        font-weight: 700;
+        padding: 1rem;
+        font-size: 25px;
+      }
+
+      &__add-review {
+        text-align: center;
+        margin-bottom: 10px;
+
+        button {
+          background-color: #fafafa;
+          border: solid 1px black;
+          box-shadow: 2px 2px 2px #303030;
+          border-radius: 5px;
+          padding: 0.5rem;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+
+      &__show-details {
+        text-align: center;
+        margin-bottom: 10px;
+
+        button {
+          background-color: #fafafa;
+          border: solid 1px black;
+          box-shadow: 2px 2px 2px #303030;
+          border-radius: 5px;
+          padding: 0.5rem;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+
+      &__add-to-recommended {
+        text-align: center;
+
+        button {
+          background-color: #fafafa;
+          border: solid 1px black;
+          box-shadow: 2px 2px 2px #303030;
+          border-radius: 5px;
+          padding: 0.5rem;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<button class="home-button"><a [routerLink]="''">Home</a></button>
+
+<div class="review-container">
+  <div class="review-container__inputs">
+    <h2>Add review</h2>
+    <form #reviewForm="ngForm" (ngSubmit)="onReviewCreate(reviewForm.value); onSubmit()">
+      
+      <label>Username</label>
+      <input type="text" name="username" ngModel>
+  
+      <label>Review</label>
+      <input type="text" name="review" ngModel>
+  
+      <label>Rating</label>
+      
+      <select id="rating" name="rating" ngModel>
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+      </select>
+  
+    <input type="submit"  value="Add Review">
+    </form>
+  </div>
+</div>

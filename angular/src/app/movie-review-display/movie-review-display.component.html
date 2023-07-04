@@ -1,0 +1,5 @@
+<div class="review-container">
+  <div class="review-container__single-review" *ngFor="let review of reviewList$|async">
+    <div class="review-container__single-review__username">{{ review.username }}: {{review.rating}} &#9733;</div>
+    <div class="review-container__single-review__review">{{ review.review }}</div>
+</div>

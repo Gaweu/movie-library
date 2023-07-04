@@ -1,0 +1,22 @@
+.review-container {
+    &__single-review {
+        display: flex;
+        flex-direction: column;
+        background-color: #fafafa;
+        margin-top: 25px;
+        margin-left: 5%;
+        margin-right: 40%;
+        border-radius: 5px 0px 0px 5px;
+        box-shadow: 5px 5px 5px #303030;
+
+        &__username {
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        &__review {
+            margin-top: 1rem;
+            margin: 10px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<button class="home-button"><a [routerLink]="''">Home</a></button>
+
+<div class="container">
+  <div class="container__detail-block">
+    <div class="container__detail-block__image-detail"><img src='http://image.tmdb.org/t/p/w500/{{data.poster_path}}'></div>
+    <div class="container__detail-block__info-detail">
+      <div class="container__detail-block__info-detail__title-detail"><h1>{{data.title}}</h1></div>
+      <div class="container__detail-block__info-detail__spacer"></div>
+      <div class="container__detail-block__info-detail__desc-detail">{{data.overview}}</div>
+      <div class="container__detail-block__info-detail__release-detail">Release Date: {{data.release_date}}</div>
+      <div class="container__detail-block__info-detail__revenue-detail">Revenue: {{data.revenue}} $</div>
+      <div class="container__detail-block__info-detail__runtime-detail">Runtime: {{data.runtime}} minutes</div>
+    </div>
+  </div>
+</div>
+
+<app-movie-review-display></app-movie-review-display>

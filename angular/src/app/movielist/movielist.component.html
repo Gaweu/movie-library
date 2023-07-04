@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="navbar__items">
+    <div class="navbar__items__buttons">
+      <button (click)="goToFirstPage(); displayAddRecommended()"><a [routerLink]="''">Home</a></button>
+      <button (click)="showRecommended(); hideAddRecommended()">Recommended list</button>
+      <button (click)="previousPage()">Previous page</button>
+      <button (click)="nextPage()">Next page</button>
+    </div>
+    <app-movie-search class="navbar__items__searchbar"></app-movie-search>
+  </div>
+</div>
+
+
+<div class="movie-container">
+  <div class="movie-container__single-movie" *ngFor="let movie of movieList$|async">
+    <div class="movie-container__single-movie__image">
+      <img src='http://image.tmdb.org/t/p/w500/{{movie.poster_path}}'>
+    </div>
+    <div class="movie-container__single-movie__movie-info">
+      <div class="movie-container__single-movie__movie-info__title">{{ movie.title }}</div>
+      <div class="movie-container__single-movie__movie-info__add-review">
+        <button><a [routerLink]="['Review',movie.id]">Add review</a></button>
+      </div>
+      <div class="movie-container__single-movie__movie-info__show-details">
+        <button><a [routerLink]="['Details',movie.id]">Show details</a></button>
+      </div>
+      <div class="movie-container__single-movie__movie-info__add-to-recommended" *ngIf="this.hideAdd">
+        <button (click)="addRecommended(movie.id)"><a [routerLink]="''">Add to recommended</a></button>
+      </div>
+    </div>
+  </div>
+</div>
